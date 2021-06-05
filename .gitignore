@@ -1,0 +1,7 @@
+vendor
+.stylelintrc.json
+composer.json
+composer.lock
+credentials.php
+images
+styles.css.map
