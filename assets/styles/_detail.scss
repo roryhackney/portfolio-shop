@@ -1,0 +1,88 @@
+//DETAIL STYLES
+//define neutral colors
+$black: #000;
+$blue-dark: #0d1330;
+$gray-light: #e8e8ee;
+$white: #fff;
+$white-light: #f8f8fa;
+
+//define colors
+$blue-shadow: #bcc5f4;
+$blue-light: #aeb9f5;
+$blue-on-dark: #6e81ed;
+$blue-on-light: #3651e7;
+$yellow: #ffe373;
+$yellow-light: #fdf1b4;
+
+//define fonts
+$heading-family: "Fredoka One", "Brush Script MT", cursive;
+$heading-size-large: 3.75rem;
+$heading-size-normal: 1.75rem;
+$heading-size-small: 1.25rem;
+$text-family: "Mali", "Verdana", sans-serif;
+$text-size-large: 1.25rem;
+$text-size-normal: 1rem;
+$text-size-small: 0.875rem;
+
+#left {
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding: 0 35px 0 0;
+}
+
+#left #breadcrumb {
+  padding-bottom: 15px;
+}
+
+.previews {
+  float: left;
+}
+
+#back {
+  clear: both;
+  display: block;
+  padding-top: 15px;
+  text-align: right;
+}
+
+#right {
+  float: right;
+  width: 50%;
+  padding: 0 100px;
+  text-align: center;
+}
+
+#right button {
+  background-color: $blue-dark;
+  color: $white-light;
+  border-radius: 25px;
+  border: none;
+  margin: 50px 25px;
+  font-size: $text-size-large;
+  padding: 5px 15px;
+  min-width: 100px;
+}
+
+#right button:hover {
+  background-color: $blue-on-dark;
+}
+
+#right p {
+  margin: 10px 0;
+}
+
+.large {
+  max-width: 500px;
+  max-height: 500px;
+  float: right;
+  border-radius: 10px;
+}
+
+.tiny {
+  width: 75px;
+  height: 75px;
+  display: block;
+  margin: 25px;
+  border-radius: 5px;
+}

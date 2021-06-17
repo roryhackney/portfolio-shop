@@ -1,0 +1,62 @@
+//CHECKOUT STYLES
+//define neutral colors
+$black: #000;
+$blue-dark: #0d1330;
+$gray-light: #e8e8ee;
+$white: #fff;
+$white-light: #f8f8fa;
+
+$gray: #9494a8;
+
+//define colors
+$blue-shadow: #bcc5f4;
+$blue-light: #aeb9f5;
+$blue-on-dark: #6e81ed;
+$blue-on-light: #3651e7;
+$yellow: #ffe373;
+$yellow-light: #fdf1b4;
+
+//define fonts
+$heading-family: "Fredoka One", "Brush Script MT", cursive;
+$heading-size-large: 3.75rem;
+$heading-size-normal: 1.75rem;
+$heading-size-small: 1.25rem;
+$text-family: "Mali", "Verdana", sans-serif;
+$text-size-large: 1.25rem;
+$text-size-normal: 1rem;
+$text-size-small: 0.875rem;
+
+.checkoutBody {
+  background-color: $gray;
+  padding: 240px;
+}
+
+.process {
+  width: 960px;
+  height: 625px;
+  border-radius: 25px;
+  background-color: $gray-light;
+}
+
+.process .button {
+  background-color: $blue-light;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 25px;
+  min-width: 50px;
+}
+
+.process form {
+  width: 33%;
+  float: left;
+}
+
+.process input {
+  border-radius: 25px;
+  border: 1px solid $blue-on-dark;
+  height: 25px;
+  text-align: center;
+  background-color: $white-light;
+  display: block;
+}

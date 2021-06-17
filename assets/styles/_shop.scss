@@ -1,0 +1,164 @@
+//SHOP STYLES
+//define neutral colors
+$black: #000;
+$blue-dark: #0d1330;
+$gray-light: #e8e8ee;
+$white: #fff;
+$white-light: #f8f8fa;
+
+//define colors
+$blue-shadow: #bcc5f4;
+$blue-light: #aeb9f5;
+$blue-on-dark: #6e81ed;
+$blue-on-light: #3651e7;
+$yellow: #ffe373;
+$yellow-light: #fdf1b4;
+
+//define fonts
+$heading-family: "Fredoka One", "Brush Script MT", cursive;
+$heading-size-large: 3.75rem;
+$heading-size-normal: 1.75rem;
+$heading-size-small: 1.25rem;
+$text-family: "Mali", "Verdana", sans-serif;
+$text-size-large: 1.25rem;
+$text-size-normal: 1rem;
+$text-size-small: 0.875rem;
+
+#hero #promo-heading {
+  font-family: $heading-family;
+  font-size: $heading-size-large;
+  color: $white-light;
+  position: absolute;
+  top: 57px;
+  left: 41px;
+}
+
+#hero div {
+  background-color: $yellow;
+  font-size: $text-size-large;
+  text-align: center;
+  width: 320px;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 187px;
+  left: 140px;
+}
+
+.home #hero div {
+  top: 115px;
+}
+
+//search and dropdown options styles
+#content-top {
+  max-width: 1440px;
+  height: 63px;
+  padding: 19px 0;
+  overflow: hidden;
+}
+
+#content-top form {
+  width: 52%;
+  margin: 0 auto;
+}
+
+#search {
+  border: 1px solid $blue-on-dark;
+  border-radius: 25px 0 0 25px;
+  width: 93%;
+  height: 25px;
+  text-align: center;
+  float: left;
+}
+
+::placeholder {
+  color: $blue-dark;
+  opacity: 1;
+}
+
+#content-top form button {
+  background-color: $blue-light;
+  width: 7%;
+  height: 25px;
+  border: 2px solid $blue-on-dark;
+  float: left;
+  border-radius: 0 25px 25px 0;
+}
+
+#content-top form button:hover {
+  background-color: $blue-on-dark;
+}
+
+#drop-down {
+  border: 1px solid $blue-on-dark;
+  border-radius: 25px;
+  width: 100px;
+  height: 25px;
+  float: right;
+  margin-right: 220px;
+  background-color: $white-light;
+  text-align: center;
+  color: $blue-dark;
+}
+
+#drop-down i {
+  position: relative;
+  top: 2px;
+}
+
+//side menu styles
+.sidebar {
+  float: left;
+  padding: 0 75px 0 50px;
+  overflow: hidden;
+}
+
+.sidebar h2 {
+  font-size: $heading-size-small;
+  text-align: left;
+  padding-top: 25px;
+}
+
+#adv {
+  display: block;
+  margin-top: 1rem;
+}
+
+//item card styles
+.item-card {
+  background-color: $white-light;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  height: 425px;
+  margin: 0 50px;
+  float: left;
+  text-align: center;
+  box-shadow: 0 4px 10px $blue-shadow;
+}
+
+.row .item-card:first-of-type {
+  margin-left: 0;
+}
+
+.row .item-card:nth-of-type(3) {
+  margin-right: 0;
+}
+
+.item-card img {
+  width: 300px;
+  height: 300px;
+}
+
+.item-card h3 {
+  font-size: $heading-size-small;
+  padding: 14px 0 5px 0;
+}
+
+.item-card p {
+  padding: 0 3px;
+}
+
+.item-card p:last-of-type {
+  padding-top: 5px;
+}

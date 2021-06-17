@@ -1,0 +1,275 @@
+//BASE STYLES
+//define neutral colors
+$black: #000;
+$blue-dark: #0d1330;
+$gray-light: #e8e8ee;
+$white: #fff;
+$white-light: #f8f8fa;
+
+//define colors
+$blue-shadow: #bcc5f4;
+$blue-light: #aeb9f5;
+$blue-on-dark: #6e81ed;
+$blue-on-light: #3651e7;
+$yellow: #ffe373;
+$yellow-light: #fdf1b4;
+
+//define fonts
+$heading-family: "Fredoka One", "Brush Script MT", cursive;
+$heading-size-large: 3.75rem;
+$heading-size-normal: 1.75rem;
+$heading-size-small: 1.25rem;
+$text-family: "Mali", "Verdana", sans-serif;
+$text-size-large: 1.25rem;
+$text-size-normal: 1rem;
+$text-size-small: 0.875rem;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: $black;
+}
+
+body {
+  font-family: $text-family;
+  font-size: $text-size-normal;
+  color: $blue-dark;
+  background-color: $gray-light;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  color: $blue-on-light;
+}
+
+a:hover {
+  color: $blue-dark;
+}
+
+a h3 {
+  color: $blue-dark;
+  text-decoration-color: $blue-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-family;
+  font-size: $heading-size-normal;
+  text-align: center;
+}
+
+.bold {
+  font-size: $text-size-large;
+  font-weight: bold;
+}
+
+.bolder {
+  font-family: $heading-family;
+  font-size: $heading-size-normal;
+}
+
+.small {
+  font-size: $text-size-small;
+}
+
+//header styles
+//header styles
+header {
+  background-color: $blue-dark;
+  height: 150px;
+  padding: 25px;
+  overflow: hidden;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+header div {
+  font-family: $heading-family;
+  font-size: $heading-size-normal;
+  color: $white-light;
+  float: left;
+  margin: 13px 0 0 35px;
+  text-align: center;
+}
+
+header div i {
+  color: $yellow;
+}
+
+header div a {
+  color: $white-light;
+  text-decoration: none;
+}
+
+header div a:hover {
+  color: $white;
+}
+
+//top navigation styles (inside header)
+header nav {
+  float: right;
+  margin: 30px 75px 0 0;
+  font-family: $text-family;
+  font-size: $text-size-large;
+  text-align: center;
+}
+
+header nav li {
+  float: left;
+  list-style-type: none;
+  width: 150px;
+  background-color: $blue-light;
+  border-radius: 25px;
+  margin-left: 25px;
+  height: 40px;
+  line-height: 40px;
+  color: $blue-dark;
+}
+
+header nav li:first-of-type {
+  margin-left: 0;
+}
+
+header nav li a {
+  text-decoration: none;
+  display: block;
+  border-radius: 25px;
+  color: $blue-dark;
+}
+
+header nav li .here {
+  background-color: $yellow-light;
+}
+
+header nav li a:hover {
+  background-color: $yellow;
+}
+
+//banner styles, between header and hero img
+#account-banner {
+  background-color: $yellow-light;
+  height: 50px;
+  font-size: $text-size-large;
+  clear: both;
+  line-height: 50px;
+  overflow: hidden;
+  border-bottom: 2px solid $blue-dark;
+}
+
+#account-banner div {
+  float: right;
+  margin-right: 50px;
+}
+
+#account-banner a {
+  margin: 0 25px;
+}
+
+#account-banner p {
+  float: left;
+  margin-left: 50px;
+}
+
+//hero image and promo styles
+#hero {
+  clear: both;
+  height: 500px;
+  max-width: 1440px;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero img {
+  max-width: 1440px;
+  height: 500px;
+  z-index: -1;
+}
+
+#hero .fa-caret-left {
+  font-size: 75px;
+  position: absolute;
+  left: 25px;
+  top: 207px;
+}
+
+#hero .fa-caret-right {
+  font-size: 75px;
+  position: absolute;
+  right: 25px;
+  top: 207px;
+}
+
+#hero .i-bg-r {
+  color: $white-light;
+  font-size: 97px;
+  right: 20px;
+  top: 197px;
+}
+
+#hero .i-bg-l {
+  color: $white-light;
+  font-size: 97px;
+  left: 19px;
+  top: 197px;
+}
+
+//main content styles
+#content {
+  clear: both;
+  padding: 50px 25px 25px 25px;
+  overflow: hidden;
+}
+
+//footer styles
+footer {
+  clear: both;
+  background-color: $blue-dark;
+  color: $white-light;
+  height: 120px;
+  text-align: center;
+  padding: 0 100px;
+  overflow: hidden;
+}
+
+footer div {
+  float: left;
+  width: 25%;
+  padding: 28px 0;
+}
+
+footer #center {
+  width: 50%;
+}
+
+footer .fa-2x {
+  padding: 0 5px;
+}
+
+footer a {
+  color: $blue-on-dark;
+}
+
+footer a:hover {
+  color: $blue-light;
+}
+
+footer a i {
+  color: $white-light;
+}
