@@ -3,7 +3,6 @@ vendor
 composer.json
 composer.lock
 credentials.php
-images
 styles.css.map
 ruleset.xml
 portfolio.code-workspace
