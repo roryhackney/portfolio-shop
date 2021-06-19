@@ -25,31 +25,140 @@ $text-family: "Mali", "Verdana", sans-serif;
 $text-size-large: 1.25rem;
 $text-size-normal: 1rem;
 $text-size-small: 0.875rem;
+$cursive-family: "Seaweed Script", "Brush Script MT", cursive;
 
 .checkoutBody {
   background-color: $gray;
-  padding: 240px;
+  height: 100vh;
+}
+
+.checkoutBody main {
+  width: 1440px;
+  height: 100vh;
 }
 
 .process {
-  width: 960px;
-  height: 625px;
+  width: 1105px;
   border-radius: 25px;
   background-color: $gray-light;
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress {
+  width: 770px;
+  float: left;
+  margin: 0 0 50px 0;
+}
+
+.progress p {
+  margin: 0 0 -36px 0;
+}
+
+.progress span {
+  width: 192px;
+  display: inline-block;
+  text-align: center;
+}
+
+.progress hr {
+  height: 6px;
+  border-radius: 5px;
+  width: 720px;
+  margin: 0 25px;
+  background-color: $gray;
+}
+
+.progress hr.complete {
+  background-color: $blue-dark;
+  position: relative;
+  top: 6px;
+}
+
+.progress hr.step1 {
+  width: 75px;
+}
+
+.progress hr.step2 {
+  width: 250px;
+}
+
+.progress hr.step3 {
+  width: 450px;
+}
+
+.progress hr.step4 {
+  width: 660px;
+}
+
+.progress i {
+  color: $gray;
+  position: relative;
+  top: 38px;
+  margin: 0 62px;
+  z-index: 1;
+}
+
+.progress .complete {
+  color: $blue-dark;
+}
+
+.progress .circles {
+  width: 770px;
+}
+
+.progress .checks {
+  width: 800px;
+  position: absolute;
+  top: 30px;
+  text-align: center;
+}
+
+.progress .fa-check {
+  color: $yellow;
+  width: 24%;
+  margin: 0 auto;
+  float: left;
 }
 
 .process .button {
   background-color: $blue-light;
   padding: 5px;
-  margin: 5px;
-  border: none;
   border-radius: 25px;
-  min-width: 50px;
+  display: block;
+  width: 100px;
+  color: $blue-dark;
+  text-decoration: none;
+  margin: 5px auto;
+  text-align: center;
+  border: 2px solid $blue-on-dark;
+  font-size: $text-size-normal;
+}
+
+.process .button.lg {
+  width: 200px;
+}
+
+.process .button:hover {
+  background-color: $blue-on-dark;
+}
+
+.swap {
+  width: 75%;
+}
+
+.swap p {
+  padding: 0 70px 20px 70px;
+  text-align: center;
 }
 
 .process form {
-  width: 33%;
+  width: 240px;
   float: left;
+  margin-right: 25px;
 }
 
 .process input {
@@ -59,4 +168,127 @@ $text-size-small: 0.875rem;
   text-align: center;
   background-color: $white-light;
   display: block;
+  width: 240px;
+  margin: 10px 0;
+}
+
+.process #guest {
+  width: 240px;
+  float: left;
+}
+
+.process #back {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  padding: 0;
+}
+
+#cart-checkout {
+  width: 260px;
+  float: right;
+  text-align: center;
+  background-color: $blue-dark;
+  color: $white-light;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#cart-checkout img {
+  float: left;
+  height: 75px;
+  width: 75px;
+  border-radius: 5px;
+}
+
+#cart-checkout input {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: $white-light;
+  color: $blue-dark;
+  border: 1px solid $blue-on-dark;
+  text-align: center;
+  display: inline;
+}
+
+#cart-checkout button {
+  background-color: $blue-light;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 25px;
+  min-width: 50px;
+}
+
+#cart-checkout button:hover {
+  background-color: $blue-on-dark;
+}
+
+#cart-checkout #save {
+  background-color: $yellow-light;
+}
+
+#cart-checkout #save:hover {
+  background-color: $yellow;
+}
+
+#cart-checkout hr {
+  margin: 10px 15px;
+  background-color: $white-light;
+  height: 3px;
+}
+
+form.single {
+  width: 720px;
+  float: none;
+  margin: 0 auto;
+}
+
+form.single input {
+  width: 360px;
+  margin: 10px auto;
+}
+
+.swap label {
+  float: left;
+}
+
+.process input[type="radio"] {
+  float: left;
+  margin: 0 5px 15px 15px;
+  width: unset;
+}
+
+.process input[type="checkbox"] {
+  width: unset;
+}
+
+.radios {
+  width: 100%;
+  display: block;
+}
+
+#checkLabel {
+  float: none;
+  text-align: center;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+#goback {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin: 10px 0 25px 0;
+}
+
+.cursive {
+  font-family: $cursive-family;
+  font-size: $heading-size-large;
+}
+
+.receipt .title {
+  padding: 20px 0 5px 0;
 }

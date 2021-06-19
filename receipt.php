@@ -28,27 +28,27 @@ include("includes/page-info.php");
                     <p><span>Account</span><span>Shipping</span><span>Billing</span><span>Confirm</span></p>
                     <div class="circles">
                         <i class="fas fa-circle fa-4x complete"></i>
-                        <i class="fas fa-circle fa-4x"></i>
-                        <i class="fas fa-circle fa-4x"></i>
-                        <i class="fas fa-circle fa-4x"></i>
+                        <i class="fas fa-circle fa-4x complete"></i>
+                        <i class="fas fa-circle fa-4x complete"></i>
+                        <i class="fas fa-circle fa-4x complete"></i>
                     </div>
                     <div class="checks">
                         <i class="fas fa-check fa-2x"></i>
+                        <i class="fas fa-check fa-2x"></i>
+                        <i class="fas fa-check fa-2x"></i>
+                        <i class="fas fa-check fa-2x"></i>
                     </div>
-                    <hr class="complete step2" />
+                    <hr class="complete step5" />
                     <hr/>
                 </div>
-                <div id="cart-checkout">
-                    <h3>Edit Cart</h3>
+                <div id="cart-checkout" class="receipt">
+                    <h3>Receipt</h3>
                     <hr/>
                     <img src="assets/images/tiny-eli1.jpg" alt="Eli's Tragic Backstory front cover">
                     <label for="qty">Qty:</label>
-                    <input type="text" id="qty" name="qty"  value="1"></input>
+                    <input type="text" id="qty" name="qty"  value="1" disabled></input>
                     <p>$5.99</p>
-                    <button>Edit</button>
-                    <button>Remove</button>
                     <p class="title">Eli's Tragic Backstory (PDF)</p>
-                    <button id="save">Save</button>
                     <hr/>
                     <div id="total">
                         <p>Subtotal: <span>$5.99</span></p>
@@ -60,21 +60,23 @@ include("includes/page-info.php");
                     <p>Thank you for supporting me!</p>
                 </div>
                 <div class="swap">
-                    <h1>Shipping</h1>
-                    <p>And where shall I send your items, esteemed guest?</p>
-                    <form id="shippingForm" class="single" action="shippingProcessing.php" method="POST">
-                        <input type="text" placeholder="Full name" name="fullName" id="fullName" aria-label="Full name">
-                        <input type="email" placeholder="Email" name="shipEmail" id="shipEmail" aria-label="Email">
-                        <input type="text" placeholder="Street address" name="shipStreet" id="shipStreet" 
-                        aria-label="Street address">
-                        <input type="text" placeholder="City" name="shipCity" id="shipCity" aria-label="City">
-                        <input type="text" placeholder="State" name="shipState" id="shipState" aria-label="State">
-                        <input type="text" placeholder="Zip code" name="shipZip" id="shipZip" aria-label="Zip code">
-                        <!-- <button type="submit" class="button">Confirm</button> -->
-                    </form>
-                    <a href="billing.php" class="button">Confirm</a>
+                    <h1>Success!</h1>
+                    <p>Thank you, esteemed guest.</p>
+                    <p>You've purchased 1 item for $6.60 with a card ending in *1234.
+                        Your receipt and digital goods have been delivered to email@email.com.
+                        Physical items will be shipped to 1234 E Road St - track them <a href="">here</a>.
+                        If you have any questions, please <a href="contact.php">contact me</a> so I can help.</p>
+                    <p>For more of my work, please check out my <a href="">Patreon</a>, 
+                    <a href="https://www.instagram.com/roryhackney">Instagram</a>, or 
+                    <a href="blog.php">blog</a>.</p>
+                    <p>I also take <a href="commissions.php">commissions</a>.</p>
+                    <p>Thank you so much for supporting my work. A digital thank you card is on its way!</p>
+                    <p>Sincerely,</p>
+                    <p class="cursive">Rory</p>
+                    <p>(You can safely close the tab.)</p>
+                    <a href="">Print Receipt</a>
+                    <a href="index.php">Home</a>
                 </div>
-                <a href="checkout.php" id="back">Back To Account</a>
             </div>
         </main>
     </body>

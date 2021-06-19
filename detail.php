@@ -34,7 +34,6 @@ include("includes/header.php");
                         //TODO CHANGE IMG SRC AND ALT OF LARGE ON CLICK OF TINY IMG - HOW TO DO WITH DATABASE + ONCLICK?
                         echo '<img class="large" src="assets/images/large-' . $row['imgName'] . '1.jpg" ' .
                         'alt="' . $row['img1alt'] . '">';
-                        echo '<a id="back" href="shop.php">Back To Shop</a>';
                         echo '</div> <!--end left div-->';
                         echo '<div id="right">';
                         echo '<h1>' . $row['title'] . ' (' . $row['yearMade'] . ')</h1>';
@@ -86,6 +85,7 @@ include("includes/header.php");
                         echo '<div id="addedMessage" class= "hidden">';
                         echo '<p>Added to cart.</p>';
                         echo '</div>';
+                        echo '<a id="back" href="shop.php">Back To Shop</a>';
                         //format-specific details
                         echo '<h2>Product Details</h2>';
                         if ($row['pdfDetails'] !== null) {

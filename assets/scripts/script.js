@@ -1,53 +1,78 @@
-//detail page code
-if(window.location.pathname === '/detail.php'){
-    if(localStorage.cart) {
-        console.log('current cart: ' + localStorage.getItem("cart"));
-    } else {
-        localStorage.setItem("cart", JSON.stringify([]));
-        // console.log('set cart to:' + JSON.parse(localStorage.getItem("cart")));
-    }
+//set cart variable in local storage (array of objects)
+if(localStorage.cart) {
+    console.log('current cart: ' + localStorage.getItem("cart"));
+} else {
+    localStorage.setItem("cart", JSON.stringify([]));
+    // console.log('set cart to:' + JSON.parse(localStorage.getItem("cart")));
+}
 
-    let pdfButton = document.getElementById("pdf");
-    if(pdfButton !== null){
-        pdfButton.addEventListener("click", incrementCart);
-    }
-    let origButton = document.getElementById("orig");
-    if(origButton !== null){
-        origButton.addEventListener("click", incrementCart);
-    }
-    let printButton = document.getElementById("print");
-    if(printButton !== null){
-        printButton.addEventListener("click", incrementCart);
-    }
-    let cartIcon = document.getElementById("cart-icon");
-    let cartNumber = document.getElementById("cart-number");
-    cartIcon.addEventListener("click", displayCart);
-    cartNumber.addEventListener("click", displayCart);
+//set cartTotal variable in local storage (integer)
+if(localStorage.cartTotal) {
+    console.log('current cart total: ' + localStorage.getItem("cartTotal"));
+} else {
+    localStorage.setItem("cartTotal", 0);
+}
 
-    let confirm = document.getElementById("addedMessage");
+//select DOM elements and add click events (detail page buttons)
+let pdfButton = document.getElementById("pdf");
+if(pdfButton !== null){
+    pdfButton.addEventListener("click", incrementCart);
+}
+let origButton = document.getElementById("orig");
+if(origButton !== null){
+    origButton.addEventListener("click", incrementCart);
+}
+let printButton = document.getElementById("print");
+if(printButton !== null){
+    printButton.addEventListener("click", incrementCart);
+}
+let confirm = document.getElementById("addedMessage");
 
-    function displayCart() {
-        console.log("DISPLAY");
-        let cartDisplay = document.getElementById("cart");
-        cartDisplay.classList.toggle("hidden");
-    }
 
-    function incrementCart(e) {
-        console.log("ADDITEM");
-        let prodId = getQuery();
-        let format = e.target.innerText;
-        cartNumber.innerText = parseInt(cartNumber.innerText) + 1;
-        let cart = [];
-        cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push({id: prodId, format: format});
-        // console.log('added cart:' + JSON.stringify(cart));
-        localStorage.setItem("cart", JSON.stringify(cart));
-        // console.log('new session cart: ' + localStorage.getItem("cart"));
-        confirm.classList.toggle("hidden");
-        setTimeout(function(){confirm.classList.toggle("hidden")}, 4000);
-        return;
+//select DOM elements and add click events (site wide cart icons)
+let cartIcon = document.getElementById("cart-icon");
+let cartNumber = document.getElementById("cart-number");
+cartNumber.innerText = localStorage.getItem("cartTotal");
+cartIcon.addEventListener("click", displayCart);
+cartNumber.addEventListener("click", displayCart);
+//DOM elements click events on cart menu
+let clearCart = document.getElementById("clear");
+clearCart.addEventListener("click", clearCartStorage);
+
+function clearCartStorage() {
+    localStorage.setItem("cart", JSON.stringify([]));
+    localStorage.setItem("cartTotal", 0);
+    cartNumber.innerText = localStorage.getItem("cartTotal");
+    document.getElementById("checkoutButton").classList.add("hidden");
+    console.log("Cart cleared: " + localStorage.getItem("cart") + localStorage.getItem("cartTotal"));
+}
+//toggle visibility of cart
+function displayCart() {
+    let cartDisplay = document.getElementById("cart");
+    cartDisplay.classList.toggle("hidden");
+    if(localStorage.getItem("cartTotal") > 0) {
+        document.getElementById("checkoutButton").classList.remove("hidden");
     }
-} //end detail page code
+}
+
+//add clicked product to cart array and increase cart total (int) by 1
+function incrementCart(e) {
+    let prodId = getQuery();
+    let format = e.target.innerText;
+    let cartNum = parseInt(localStorage.getItem("cartTotal")) + 1;
+    cartNumber.innerText = cartNum;
+    let cart = [];
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({id: prodId, format: format});
+    // console.log('added cart:' + JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cartTotal", cartNum);
+    // console.log('new session cart: ' + localStorage.getItem("cart"));
+    confirm.classList.remove("hidden");
+    document.getElementById("checkoutButton").classList.remove("hidden");
+    setTimeout(function(){confirm.classList.add("hidden")}, 3000);
+    return;
+}
 
 //if there's a filter OR id, return its value
 function getQuery(){

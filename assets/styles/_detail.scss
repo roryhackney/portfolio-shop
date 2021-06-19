@@ -23,6 +23,7 @@ $text-family: "Mali", "Verdana", sans-serif;
 $text-size-large: 1.25rem;
 $text-size-normal: 1rem;
 $text-size-small: 0.875rem;
+$cursive-family: "Seaweed Script", "Brush Script MT", cursive;
 
 #left {
   float: left;
@@ -42,8 +43,7 @@ $text-size-small: 0.875rem;
 #back {
   clear: both;
   display: block;
-  padding-top: 15px;
-  text-align: right;
+  padding-bottom: 10px;
 }
 
 #right {

@@ -27,6 +27,9 @@ switch ($page) {
         break;
     case 'checkout.php':
     case 'shipping.php':
+    case 'billing.php':
+    case 'confirm.php':
+    case 'receipt.php':
         $title = "Checkout | Rory's Stories, Art Portfolio and Shop";
         $currentPage = "checkoutBody";
         break;

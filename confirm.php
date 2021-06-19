@@ -26,11 +26,18 @@ include("includes/page-info.php");
             <div class="process">
                 <div class="progress">
                     <p><span>Account</span><span>Shipping</span><span>Billing</span><span>Confirm</span></p>
-                    <i class="fas fa-circle fa-4x"></i>
-                    <i class="fas fa-circle fa-4x"></i>
-                    <i class="fas fa-circle fa-4x"></i>
-                    <i class="fas fa-circle fa-4x"></i>
-                    <hr class="complete step1"/>
+                    <div class="circles">
+                        <i class="fas fa-circle fa-4x complete"></i>
+                        <i class="fas fa-circle fa-4x complete"></i>
+                        <i class="fas fa-circle fa-4x complete"></i>
+                        <i class="fas fa-circle fa-4x"></i>
+                    </div>
+                    <div class="checks">
+                        <i class="fas fa-check fa-2x"></i>
+                        <i class="fas fa-check fa-2x"></i>
+                        <i class="fas fa-check fa-2x"></i>
+                    </div>
+                    <hr class="complete step4" />
                     <hr/>
                 </div>
                 <div id="cart-checkout">
@@ -55,34 +62,17 @@ include("includes/page-info.php");
                     <p>Thank you for supporting me!</p>
                 </div>
                 <div class="swap">
-                    <h1>Account</h1>
-                    <p>With an account, you can save your shipping and billing information, customize your experience 
-                        (fun display names, anyone?), and get coupons, updates, and thank yous through your email.</p>
-                    <form id="loginForm" action="loginProcessing.php" method="POST">
-                        <h2>Log In</h2>
-                        <input type="email" placeholder="Email" name="loginEmail" id="loginEmail" aria-label="Email">
-                        <input type="password" placeholder="Password" name="loginPassword" id="loginPassword"
-                        aria-label="Password">
-                        <button type="submit" class="button">Log In</button>
-                    </form>
-                    <form id="regForm" action="accountProcessing.php" method="POST">
-                        <h2>Create Account</h2>
-                        <input type="text" placeholder="Display name" name="displayName" id="displayName"
-                        aria-label="Display name">
-                        <input type="email" placeholder="Email" name="email" id="email" aria-label="Email">
-                        <input type="text" placeholder="Pronouns" name="pronouns" id="pronouns" aria-label="Pronouns">
-                        <input type="password" placeholder="Password" name="regpass1" id="regpass1"
-                        aria-label="Password">
-                        <input type="password" placeholder="Password (again)" name="regpass2" id="regpass2"
-                        aria-label="Password (again)">
-                        <button type="submit" class="button">Register</button>
-                    </form>
-                    <div id="guest">
-                        <h2>Guest Checkout</h2>
-                        <a href="shipping.php" class="button">Confirm</a>
-                    </div>
+                    <h1>Confirm Order</h1>
+                    <p>Just to confirm, esteemed guest:
+                    <p>You're purchasing 1 item for a total of $6.60 including shipping and tax.</p>
+                    <p>Your items will be shipped to Esteemed Guest, 1234 E Road St, Seattle WA 98103.</p>
+                    <p>You're paying with a card ending in *1234.</p>
+                    <p>Your receipt and digital goods will be delivered to email@email.com.</p>
+                    <p>Is this correct?</p>
+                    <a href="receipt.php" class="button lg">Complete Transaction</a>
+                    <a href="billing.php" id="goback">No, go back</a>
                 </div>
-                <a id="back" href="shop.php">Back To Shop</a>
+                <a href="billing.php" id="back">Back To Billing</a>
             </div>
         </main>
     </body>

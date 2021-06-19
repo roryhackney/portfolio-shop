@@ -22,6 +22,7 @@ $text-family: "Mali", "Verdana", sans-serif;
 $text-size-large: 1.25rem;
 $text-size-normal: 1rem;
 $text-size-small: 0.875rem;
+$cursive-family: "Seaweed Script", "Brush Script MT", cursive;
 
 .hidden {
   display: none;
@@ -48,6 +49,7 @@ $text-size-small: 0.875rem;
   color: $white-light;
   padding: 15px;
   border-radius: 0 0 10px 10px;
+  z-index: 1;
 }
 
 #cart img {
@@ -81,13 +83,23 @@ $text-size-small: 0.875rem;
   background-color: $blue-on-dark;
 }
 
+#cart #save,
+#cart #clear {
+  background-color: $yellow-light;
+}
+
+#cart #save:hover,
+#cart #clear:hover {
+  background-color: $yellow;
+}
+
 #cart hr {
   margin: 10px 15px;
   background-color: $white-light;
   height: 3px;
 }
 
-#cart .title {
+.title {
   font-family: $heading-family;
   padding: 5px 0;
 }
@@ -104,13 +116,13 @@ $text-size-small: 0.875rem;
   float: right;
 }
 
-#cart #save {
+#save {
   background-color: $yellow-light;
   min-width: 100px;
   margin-top: 15px;
 }
 
-#cart #save:hover {
+#save:hover {
   background-color: $yellow;
 }
 

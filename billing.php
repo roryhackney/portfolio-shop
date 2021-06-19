@@ -28,14 +28,15 @@ include("includes/page-info.php");
                     <p><span>Account</span><span>Shipping</span><span>Billing</span><span>Confirm</span></p>
                     <div class="circles">
                         <i class="fas fa-circle fa-4x complete"></i>
-                        <i class="fas fa-circle fa-4x"></i>
+                        <i class="fas fa-circle fa-4x complete"></i>
                         <i class="fas fa-circle fa-4x"></i>
                         <i class="fas fa-circle fa-4x"></i>
                     </div>
                     <div class="checks">
                         <i class="fas fa-check fa-2x"></i>
+                        <i class="fas fa-check fa-2x"></i>
                     </div>
-                    <hr class="complete step2" />
+                    <hr class="complete step3" />
                     <hr/>
                 </div>
                 <div id="cart-checkout">
@@ -60,21 +61,37 @@ include("includes/page-info.php");
                     <p>Thank you for supporting me!</p>
                 </div>
                 <div class="swap">
-                    <h1>Shipping</h1>
-                    <p>And where shall I send your items, esteemed guest?</p>
-                    <form id="shippingForm" class="single" action="shippingProcessing.php" method="POST">
-                        <input type="text" placeholder="Full name" name="fullName" id="fullName" aria-label="Full name">
-                        <input type="email" placeholder="Email" name="shipEmail" id="shipEmail" aria-label="Email">
-                        <input type="text" placeholder="Street address" name="shipStreet" id="shipStreet" 
-                        aria-label="Street address">
-                        <input type="text" placeholder="City" name="shipCity" id="shipCity" aria-label="City">
-                        <input type="text" placeholder="State" name="shipState" id="shipState" aria-label="State">
-                        <input type="text" placeholder="Zip code" name="shipZip" id="shipZip" aria-label="Zip code">
+                    <h1>Billing</h1>
+                    <p>Thank you! Your support makes my art possible.</p>
+                    <form id="billingForm" class="single" action="billingProcessing.php" method="POST">
+                        <label for="useShipping" id="checkLabel">Use Shipping Information?</label>
+                        <input type="checkbox" id="useShipping" name="useShipping" checked>
+                        <div class="radios">
+                            <input type="radio" id="credit" name="payment" value="credit" checked>
+                            <label for="credit">Credit Card</label>
+                            <input type="radio" id="debit" name="payment" value="debit">
+                            <label for="debit">Debit Card</label>
+                            <input type="radio" id="paypal" name="payment" value="paypal">
+                            <label for="paypal">Paypal</label>
+                            <input type="radio" id="apple" name="payment" value="apple">
+                            <label for="apple">Apple Pay</label>
+                            <input type="radio" id="google" name="payment" value="google">
+                            <label for="google">Google Pay</label>
+                            <input type="radio" id="samsung" name="payment" value="samsung">
+                            <label for="samsung">Samsung Pay</label>
+                        </div>
+                        <input type="text" placeholder="Card number" name="cardNumber" id="cardNumber" 
+                        aria-label="Card number">
+                        <input type="text" placeholder="Zip code" name="billZip" id="billZip" aria-label="Zip code">
+                        <input type="text" placeholder="Security number (back of card)" name="securityNumber" 
+                        id="securityNumber" aria-label="Security Number (back of card)">
+                        <input type="text" placeholder="Expiration date" name="expiration" id="expiration" 
+                        aria-label="Expiration date">
                         <!-- <button type="submit" class="button">Confirm</button> -->
                     </form>
-                    <a href="billing.php" class="button">Confirm</a>
+                    <a href="confirm.php" class="button">Confirm</a>
                 </div>
-                <a href="checkout.php" id="back">Back To Account</a>
+                <a href="shipping.php" id="back">Back To Shipping</a>
             </div>
         </main>
     </body>

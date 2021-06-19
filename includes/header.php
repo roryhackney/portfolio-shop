@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="./favicon.ico">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Mali:wght@400;600&display=swap"
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Mali&family=Seaweed+Script:wght@400;600&display=swap"
         rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
@@ -69,22 +69,27 @@
             <div id="cart" class="hidden">
                 <h3>Edit Cart</h3>
                 <hr/>
-                <img src="assets/images/tiny-eli-cover.jpg" alt="Eli's Tragic Backstory front cover">
+                <a href="detail.php?id=1">
+                    <img src="assets/images/tiny-eli1.jpg" alt="Eli's Tragic Backstory front cover">
+                </a>
                 <label for="qty">Qty:</label>
                 <input id="qty" name="qty" type="text" value="1"></input>
                 <p>$5.99</p>
                 <button>Edit</button>
                 <button>Remove</button>
-                <p class="title">Eli's Tragic Backstory (PDF)</p>
+                <p class="title">Eli's Tragic Backstory (Print)</p>
                 <button id="save">Save</button>
+                <button id="clear">Clear</button>
                 <hr/>
                 <div id="total">
                     <p>Subtotal: <span>$5.99</span></p>
                     <p>Tax: <span>$<?php echo round(5.99 * .1025, 2);?></span></p>
                     <p>Shipping: <span>N/A</span></p>
-                    <p>Total: <span>$6.09</span></p>
+                    <p>Total: <span>$6.60</span></p>
                 </div>
                 <hr/>
                 <p>Thank you for supporting me!</p>
-                <a href="checkout.php"><button class="checkout">Check Out</button></a>
+                <a href="checkout.php" id="checkoutButton" class="hidden">
+                    <button class="checkout">Check Out</button>
+                </a>
             </div>
