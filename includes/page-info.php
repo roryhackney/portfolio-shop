@@ -21,6 +21,15 @@ switch ($page) {
                 "<p>Digital goods and commissions</p>" .
                 "<p class=\"small\">4/15-4/21</p>";
         break;
+    case 'comics.php':
+        $title = "Shop Comics | Rory's Stories, Art Portfolio and Shop";
+        $heading = "Shop Comics";
+        $currentPage = "shop";
+        $promoHeading = "Store Launch Sale!";
+        $promo = "<p class=\"bolder\">10% off</p>" .
+                "<p>Digital goods and commissions</p>" .
+                "<p class=\"small\">4/15-4/21</p>";
+        break;
     case 'detail.php':
         $title = "Product Detail | Rory's Stories, Art Portfolio and Shop";
         $currentPage = "shop";
